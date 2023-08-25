@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Manipulation</title>
+	<style type="text/css">
+		h1, h3 {
+			text-align: center;
+			text-decoration: none;
+			color: darkgoldenrod;
+		}
+
+		strong {
+			font-family: cursive;
+			font-size: 25px;
+		}
+
+		body {
+			padding: 20px;
+			background-color: black;
+			color: white;
+		}
+
+		p {
+			padding: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- Summary below -->
+<h1>DOM Manipulation Summary</h1>
+
+<strong>DOM manipulation in JavaScript is the process of interacting with the DOM API to change or modify an HTML document that will be displayed in a web browser.</strong>
+
+<p>There are many ways to manipulate the DOM.</p>
+
+<h3>Adding elements to the page</h3>
+
+<p>We're going to talk about different ways we can add elements to the page.</p>
+
+<p>Firstly, you should select the element you'e going to be adding and you can append elements to it. And in appending, we have <strong>append</strong> & <strong>appendChild</strong>.For append, you can append strings or multiple strings and also with "divs", "spans". While the appendChild you can't append "strings" but only "divs", "span", etc.</p>
+
+<p>To create an element in DOM, you can use document.createElement() and in the parenthesis you place the element you want to create. But it's good to know that after creating an element you'll have to add that element so it can be visible. And to add element to the body we'll use body.append(), and we'll also add the element name in the parenthesis like "div". And if we want to add atext to that "div" element, we'll say <strong>div.innerText = "Hello World"</strong>.</p>
+
+<p>There's a difference between innerText & TextContent. TextContent is going to print you exactly the text content with all of the spacing & all the indentation of all the contents inside the "div", while innerText is different because it looks at the CSS to see, "is this actually visible on the screen?", if so, i'm going to give it to you, else i'm not. It display your text just as it should display in your HTML. innerHTML is the only way in JavaScript you can add HTML from a string into an element.</p>
+
+<h3>Removing Elements from the page</h3>
+
+<p>If we want to remove contents from the page, we'll need to write the element's name and the text we want to remove and then call the remove function. <strong>ex: spanBye.remove()</strong>. And incase we want to add it back we'll just do <strong>div.append(spanBye)</strong>.</p>
+
+<p>There's something called <strong>"toggle"</strong>, it's actually used to add things if they're not already added and to remove things if they're already added and we want to remove it.</p>
+
+<p>The style property is essentially the way to access any CSS property. If you want to set any CSS property, you just do <strong>style, dot(.), & then that property name and then you set it to whatever value you want.</strong></p>
+
+
+	<!-- PSETs below -->
+	<script type="text/javascript">
+
+		/* 1. BMI Calculator
+
+			Build a program that calculates a person's Body Mass Index (BMI) based on their height and weight. The program should prompt the user to enter their height (in meters) and weight (in kilograms), and then calculate and display their BMI.
+		*/
+
+
+
+
+
+		/* 2. Driving License Eligibility
+
+			Create a program that checks if a person is eligible for a driver's license based on their age. The program should prompt the user to enter their age, and then display a message indicating whether they are eligible for a driver's license or not.
+		*/
+
+let age = prompt("What's your age please? ");
+
+    if (age >= 0 && age <= 17) {
+	   alert("Sorry, you're not eligable to obtain a driver's liscence.")
+    }
+
+    if (age >= 18) {
+	   alert("Yes, you're eligable to obtain a driver's liscence!")
+    }
+
+
+		/* 3. 5. Age Group Classifier
+
+			Write a program that classifies a person into different age groups based on their age. The program should prompt the user to enter their age and then display a message indicating which age group they belong to (e.g., child, teenager, adult, senior). Use a Switch statement
+		*/
+
+let the_age = prompt("What is your age? ");
+
+if (the_age >= 0 && the_age <= 12) {
+  alet("You're a Child");
+} 
+
+else if (the_age >= 13 && the_age <= 19) {
+  alert("You're a Teenager");
+} 
+
+else if (the_age >= 20 && the_age <= 35) {
+  alert("You're an Adult");
+} 
+
+else if (the_age > 35) {
+  alert("You're a Senior");
+} 
+
+else {
+  alert("Invalid");
+}
+
+
+		/* 4. Multiply
+
+			Create a function called 'multiply' that takes two parameters and returns their product.
+		*/
+
+function multiply(a, b) {
+	console.log(a * b)
+}
+
+multiply(3, 4) 
+
+
+		/* 5. Divide
+
+			Create a function called 'divide' that takes two parameters and returns their quotient.
+		*/
+
+function divide(a, b) {
+	console.log(b / a)
+}
+
+divide(3, 4) 
+
+
+		/* 6. Subtract
+
+			Create a function called 'subtract' that takes two parameters and returns their difference.
+		*/
+
+function substract(a, b) {
+	console.log(b - a)
+}
+
+multiply(3, 4) 
+
+
+		/* 7. isEven
+
+			Create a function called 'isEven' that takes a number as a parameter and returns true if it's even, otherwise false.
+		*/
+
+function isEven(Figure) {
+	return Figure % 2 === 0
+}
+	console.log(isEven(12));
+
+		/* 8. Temperature
+
+			Write an if-else statement that checks if a variable 'temperature' is greater than 30 and prints "It's hot" if true, otherwise, print "It's not so hot".
+		*/
+
+let temperature = prompt("What is the temperature in your area?")
+
+if (temperature >= 0 && temperature <= 30) {
+	alert("It's not so hot")
+}
+
+if (temperature >30) {
+	alert("It's hot!!")
+}
+
+ 
+		
+	</script>
+</body>
+</html>
